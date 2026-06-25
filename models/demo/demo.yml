@@ -1,6 +1,5 @@
 version: 2
 
-
 models:
   - name: employee
     description: "Employee DBT model"
@@ -14,10 +13,10 @@ models:
                 values: ['1','2','3','4','5']
                 config:
                   severity: warn
+      - name: EMP_SALARY
+        data_tests:
+          - salary_check
         
-          
-
-
 sources:
   - name: EMPLOYEE
     database: DBT_DB
